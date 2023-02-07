@@ -1,0 +1,188 @@
+﻿<process name="TA - HTML Table Generate" version="1.0" bpversion="6.10.4.51738" narrative="" byrefcollection="true" type="object" runmode="Exclusive" preferredid="cc87c994-ac2d-4a96-8ede-d3df5fdc8708">
+  <appdef>
+    <element name="Application Root">
+      <id>759d0ea0-61d3-4ad9-9810-fd60f5529d6f</id>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+  </appdef>
+  <view>
+    <camerax>-195</camerax>
+    <cameray>-105</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="96d3ac7d-1436-4efa-8816-1e19d0229b78" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="983455f4-0bf8-46d2-abe7-906b38799b80" type="Normal" published="True">
+    <name>Generate HTML Table</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>-215</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="369225f1-8fd2-411c-b397-85eeec80f2ca" name="Start" type="Start">
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>648e1536-c6b2-4e1e-92d5-3f42badfdc2c</onsuccess>
+  </stage>
+  <stage stageid="648e1536-c6b2-4e1e-92d5-3f42badfdc2c" name="End" type="End">
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="f237f49c-991a-4fb0-ae33-0c8ad0d7932e" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+    <references>
+      <reference>System.dll</reference>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+      <import>System.Data</import>
+      <import>System.Collections.Generic</import>
+      <import>System.Text</import>
+    </imports>
+    <language>csharp</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="45225db5-2506-4628-b7bf-1e4dda8f5a74" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>96d3ac7d-1436-4efa-8816-1e19d0229b78</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="ba51b0c4-1569-4076-88c4-7c9cecab3918" name="Start" type="Start">
+    <subsheetid>96d3ac7d-1436-4efa-8816-1e19d0229b78</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>0dddf0b5-cc26-4ecb-9b61-f1ba1986d235</onsuccess>
+  </stage>
+  <stage stageid="0dddf0b5-cc26-4ecb-9b61-f1ba1986d235" name="End" type="End">
+    <subsheetid>96d3ac7d-1436-4efa-8816-1e19d0229b78</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="df5580f1-dfdd-4ce8-a9ca-7a81598c2306" name="Generate HTML Table" type="SubSheetInfo">
+    <subsheetid>983455f4-0bf8-46d2-abe7-906b38799b80</subsheetid>
+    <narrative>This object will generate HTML table using collection as input.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="35f3a56f-fad8-40a9-b6ac-deba6323c643" name="Start" type="Start">
+    <subsheetid>983455f4-0bf8-46d2-abe7-906b38799b80</subsheetid>
+    <loginhibit />
+    <display x="15" y="-135" w="90" h="30" />
+    <inputs>
+      <input type="collection" name="Input Collection" narrative="Input Collection" stage="Input Collection" />
+    </inputs>
+    <onsuccess>7a85dc92-2345-43cf-a0c5-c40c04cad003</onsuccess>
+  </stage>
+  <stage stageid="ec449e00-10f1-4c35-af59-d90696bd6f92" name="End" type="End">
+    <subsheetid>983455f4-0bf8-46d2-abe7-906b38799b80</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" w="90" h="30" />
+    <outputs>
+      <output type="text" name="HTML Table" narrative="HTML Table" stage="HTML Table" />
+    </outputs>
+  </stage>
+  <stage stageid="40953902-b00c-4842-83db-4404b761b48e" name="Note1" type="Note">
+    <subsheetid>96d3ac7d-1436-4efa-8816-1e19d0229b78</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="844b87db-bdaf-4692-b0b2-aec9b3054252" name="Note2" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="7a85dc92-2345-43cf-a0c5-c40c04cad003" name="Generate HTML Table" type="Code">
+    <subsheetid>983455f4-0bf8-46d2-abe7-906b38799b80</subsheetid>
+    <loginhibit />
+    <display x="15" y="-90" w="90" h="30" />
+    <inputs>
+      <input type="collection" name="inputData" expr="[Input Collection]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="outEmailBody" stage="HTML Table" />
+    </outputs>
+    <onsuccess>ec449e00-10f1-4c35-af59-d90696bd6f92</onsuccess>
+    <code><![CDATA[StringBuilder sb = new StringBuilder();
+if(inputData.Rows.Count > 0)
+{
+	sb.Append("<table border = 1>");
+	sb.Append("<tr>");
+	foreach(DataColumn dc in inputData.Columns)
+	{
+		sb.Append("<th>");
+		sb.Append(dc.ColumnName);
+		sb.Append("</th>");
+		
+	}
+	sb.Append("</tr>");
+	
+	foreach(DataRow dr in inputData.Rows)
+	{
+		sb.Append("<tr>");
+		foreach(DataColumn dc in inputData.Columns)
+		{
+			sb.Append("<td>");
+			sb.Append(dr[dc.ColumnName].ToString());
+			sb.Append("</td>");
+		}
+		sb.Append("</tr>");
+	}	
+	sb.Append("</table><br><br>");
+}
+outEmailBody = sb.ToString();]]></code>
+  </stage>
+  <stage stageid="ceae83ca-605c-41b2-9f4c-8f70dc64b435" name="Input Collection" type="Collection">
+    <subsheetid>983455f4-0bf8-46d2-abe7-906b38799b80</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ca457e7f-6367-474d-b5ce-35ecb3e778ca" name="Input Collection" type="Block">
+    <subsheetid>983455f4-0bf8-46d2-abe7-906b38799b80</subsheetid>
+    <loginhibit />
+    <display x="-270" y="-45" w="150" h="45" />
+    <font family="Segoe UI" size="10" style="Regular" color="FFFF99" />
+  </stage>
+  <stage stageid="ad902997-2bdb-44a1-905d-c6b44da68a00" name="HTML Table" type="Data">
+    <subsheetid>983455f4-0bf8-46d2-abe7-906b38799b80</subsheetid>
+    <display x="-195" y="45" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8d4c73be-b6d4-40ac-b056-3d1c2d95d270" name="Output Variable" type="Block">
+    <subsheetid>983455f4-0bf8-46d2-abe7-906b38799b80</subsheetid>
+    <loginhibit />
+    <display x="-270" y="15" w="150" h="45" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+</process>
